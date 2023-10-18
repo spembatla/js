@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Task5(2)</h2>
+    <p>The array to single dimension array from multiple dimension array.</p>
+    <p id="demo"></p>
+    <script>
+        var arr = [[4, 2], [[42, 45, 42], [26]], [26, 52, 48]];
+        function flatarrs(arr) {
+            var flatarr = [];
+            for (var i = 0; i < arr.length; i++) {
+                var current = arr[i];
+                if (!Array.isArray(...current)) {
+                    flatarr.push(...current);
+
+                } else {
+                    for (var j = 0; j < current.length; j++) {
+                        flatarr.push(...current[j]);
+                    }
+                }
+            }
+            // var fla = [...new Set(flatarr)];
+            var fla = flatarr.filter((element, index) => {
+                return flatarr.indexOf(element) === index;
+            });
+            fla.sort(function (a, b) { return a - b });
+            document.getElementById("demo").innerHTML = "Output is :" + fla;
+        }
+        flatarrs(arr);
+    </script>
+</body>
+
+</html>

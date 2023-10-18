@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>events</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Time & Date</h1>
+        <button onclick="document.getElementById('demo').innerHTML=Date()">
+            This is Date & Time
+        </button>
+        <p id="demo"></p>
+        <br>
+        <br>
+        <h3>Inside the button</h3>
+        <button onclick="this.innerHTML=Date()">The Time is?</button>
+        <br>
+        <br>
+        <h3>Mouse over the button</h3>
+        <button onmouseover="this.innerHTML=Date()">Time</button>
+        <br>
+        <br>
+        <h3>Alert </h3>
+        <button onclick="alert('Hello')">Click me</button>
+    </body>
+</html>

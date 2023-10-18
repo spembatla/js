@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Task4</h2>
+    <p>Count number of words in a paragraph</p>
+    <p id="demo"></p>
+    <script>
+        function countWords() {
+            var text = " A dog jumps from a fence";
+            var count = 0;
+            for (var i = 0; i < text.length; i++) {
+                if (text.charAt(i) == ' ') {
+                    count++;
+                }
+            }
+            //console.log("Total words in a given sentence :" + count);
+            document.getElementById("demo").innerHTML = "Total words in a given sentence :" + count;
+        }
+        countWords();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Task5</h2>
+    <p>The array to single dimension array from multiple dimension array</p>
+    <p id="demo"></p>
+    <script>
+        var arr = [[4, 2], [[42, 45, 42], [26]], [26, 52, 48]];
+        var flatarr = [].concat(...arr);
+        var a = [].concat(...flatarr);
+        var arrs = [...new Set(a)];
+        arrs.sort(function (a, b) { return a - b });
+        document.getElementById("demo").innerHTML = "Output is :" + arrs;
+    </script>
+</body>
+
+</html>

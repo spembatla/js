@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Task1</title>
+</head>
+
+<body>
+    <h2>Task1</h2>
+    <p>Count no.of vowels in a String.</p>
+    <p id="demo"></p>
+
+    <script>
+        function countVowels(str) {
+            var count = 0;
+            for (var i = 0; i < str.length; i++) {
+                var c = str[i].toLowerCase();
+                if (c === 'a' || c === 'e' || c === 'i' || c === 'o' || c === 'u') {
+                    count = count + 1;
+                }
+            }
+            //console.log('Vowels in ' + str + ' are :', count);
+            document.getElementById("demo").innerHTML = 'Vowels in ' + str + ' are :' + count;
+        }
+
+        countVowels('education');
+        countVowels('Onion');
+
+    </script>
+</body>
+
+</html>

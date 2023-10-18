@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Task3</h2>
+    <p>Separate The Even & Odd numbers.</p>
+    <p id="demo1"></p>
+    <p id="demo"></p>
+    <script>
+        function SeparateArray() {
+            var arr = [0, 2, 8, 7, 22, 23, 47, 1, 22.5];
+            var even = [];
+            var odd = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 == 0) {
+                    even.push(arr[i]);
+                } else {
+                    odd.push(arr[i]);
+                }
+            }
+
+            //console.log('even is:' + even);
+            document.getElementById("demo1").innerHTML = "Even is: " + even;
+            //console.log('odd is:' + odd);
+            document.getElementById("demo").innerHTML = "Odd is: " + odd;
+        }
+        SeparateArray();
+    </script>
+</body>
+
+</html>
